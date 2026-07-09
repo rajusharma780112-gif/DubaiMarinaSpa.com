@@ -825,3 +825,18 @@ section h2{
 }
 
 }
+/* Header shadow when scrolling */
+.header.scrolled{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+}
+
+/* Back to Top hover */
+#backToTop:hover{
+
+    background:#b68c1d;
+
+    transform:translateY(-4px);
+
+}
