@@ -9,7 +9,7 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > 80) {
 
         header.style.background = "rgba(8,8,8,.96)";
-        header.style.boxShadow = "0 8px 30px rgba(0,0,0,.35)";
+        header.style.boxShadow = "0 8px 30px rgba(0,0,0,.35)"; 
 
     } else {
 
@@ -132,27 +132,27 @@ document.querySelectorAll(".primary-btn,.book-btn").forEach(button=>{
 const menuToggle = document.getElementById("menuToggle");
 const navbar = document.getElementById("navbar");
 
-menuToggle.addEventListener("click", () => {
+if(menuToggle && navbar){
 
-    navbar.classList.toggle("active");
+    menuToggle.addEventListener("click",()=>{
 
-    menuToggle.classList.toggle("open");
-
-});
-
-/* Close menu after clicking a link */
-
-document.querySelectorAll("#navbar a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navbar.classList.remove("active");
-
-        menuToggle.classList.remove("open");
+        navbar.classList.toggle("active");
+        menuToggle.classList.toggle("open");
 
     });
 
-});
+    document.querySelectorAll("#navbar a").forEach(link=>{
+
+        link.addEventListener("click",()=>{
+
+            navbar.classList.remove("active");
+            menuToggle.classList.remove("open");
+
+        });
+
+    });
+
+}
 /* ==========================
    PAGE LOADER
 ========================== */
