@@ -1,225 +1,162 @@
-/* ==========================
-   STICKY HEADER
-========================== */
+/* ==========================================
+   DUBAI MARINA SPA
+   Main JavaScript
+========================================== */
 
-const header = document.querySelector("header");
+document.addEventListener("DOMContentLoaded", () => {
 
-window.addEventListener("scroll", () => {
+    /* ===============================
+       Sticky Header
+    =============================== */
 
-    if (window.scrollY > 80) {
+    const header = document.querySelector("header");
 
-        header.style.background = "rgba(8,8,8,.96)";
-        header.style.boxShadow = "0 8px 30px rgba(0,0,0,.35)"; 
+    window.addEventListener("scroll", () => {
 
-    } else {
+        if(window.scrollY > 60){
 
-        header.style.background = "rgba(12,12,12,.88)";
-        header.style.boxShadow = "none";
+            header.style.background="rgba(10,10,10,.95)";
+            header.style.boxShadow="0 10px 30px rgba(0,0,0,.35)";
+
+        }else{
+
+            header.style.background="rgba(10,10,10,.82)";
+            header.style.boxShadow="none";
+
+        }
+
+    });
+
+    /* ===============================
+       Mobile Menu
+    =============================== */
+
+    const menuToggle=document.getElementById("menuToggle");
+    const navbar=document.getElementById("navbar");
+
+    if(menuToggle && navbar){
+
+        menuToggle.addEventListener("click",()=>{
+
+            navbar.classList.toggle("active");
+            menuToggle.classList.toggle("open");
+
+        });
+
+        document.querySelectorAll("#navbar a").forEach(link=>{
+
+            link.addEventListener("click",()=>{
+
+                navbar.classList.remove("active");
+                menuToggle.classList.remove("open");
+
+            });
+
+        });
+
+    }
+
+    /* ===============================
+       Active Navigation
+    =============================== */
+
+    const current=window.location.pathname.split("/").pop();
+
+    document.querySelectorAll("nav a").forEach(link=>{
+
+        if(link.getAttribute("href")===current){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+    /* ===============================
+       Fade Animation
+    =============================== */
+
+    const observer=new IntersectionObserver(entries=>{
+
+        entries.forEach(entry=>{
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    },{
+
+        threshold:.15
+
+    });
+
+    document.querySelectorAll("section").forEach(section=>{
+
+        section.classList.add("hidden");
+
+        observer.observe(section);
+
+    });
+
+    /* ===============================
+       Back To Top
+    =============================== */
+
+    const back=document.getElementById("backToTop");
+
+    if(back){
+
+        window.addEventListener("scroll",()=>{
+
+            if(window.scrollY>500){
+
+                back.style.display="flex";
+
+            }else{
+
+                back.style.display="none";
+
+            }
+
+        });
+
+        back.addEventListener("click",()=>{
+
+            window.scrollTo({
+
+                top:0,
+                behavior:"smooth"
+
+            });
+
+        });
 
     }
 
 });
 
-
-/* ==========================
-   SMOOTH SCROLL
-========================== */
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-    anchor.addEventListener("click", function(e){
-
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if(target){
-
-            target.scrollIntoView({
-
-                behavior:"smooth"
-
-            });
-
-        }
-
-    });
-
-});
-
-
-/* ==========================
-   FADE ANIMATION
-========================== */
-
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("show");
-
-        }
-
-    });
-
-},{
-    threshold:0.15
-});
-
-document.querySelectorAll("section").forEach(section=>{
-
-    section.classList.add("hidden");
-
-    observer.observe(section);
-
-});
-
-
-/* ==========================
-   IMAGE HOVER EFFECT
-========================== */
-
-document.querySelectorAll("img").forEach(image=>{
-
-    image.addEventListener("mouseenter",()=>{
-
-        image.style.transform="scale(1.03)";
-
-    });
-
-    image.addEventListener("mouseleave",()=>{
-
-        image.style.transform="scale(1)";
-
-    });
-
-});
-
-
-/* ==========================
-   BUTTON RIPPLE EFFECT
-========================== */
-
-document.querySelectorAll(".primary-btn,.book-btn").forEach(button=>{
-
-    button.addEventListener("click",function(e){
-
-        let ripple=document.createElement("span");
-
-        ripple.className="ripple";
-
-        ripple.style.left=e.offsetX+"px";
-
-        ripple.style.top=e.offsetY+"px";
-
-        this.appendChild(ripple);
-
-        setTimeout(()=>{
-
-            ripple.remove();
-
-        },600);
-
-    });
-
-});
-/* ==========================
-   MOBILE MENU
-========================== */
-
-const menuToggle = document.getElementById("menuToggle");
-const navbar = document.getElementById("navbar");
-
-if(menuToggle && navbar){
-
-    menuToggle.addEventListener("click",()=>{
-
-        navbar.classList.toggle("active");
-        menuToggle.classList.toggle("open");
-
-    });
-
-    document.querySelectorAll("#navbar a").forEach(link=>{
-
-        link.addEventListener("click",()=>{
-
-            navbar.classList.remove("active");
-            menuToggle.classList.remove("open");
-
-        });
-
-    });
-
-}
-/* ==========================
-   PAGE LOADER
-========================== */
+/* ==========================================
+   Loader
+========================================== */
 
 window.addEventListener("load",()=>{
 
-const loader=document.getElementById("loader");
+    const loader=document.getElementById("loader");
 
-loader.style.opacity="0";
+    if(loader){
 
-setTimeout(()=>{
+        loader.style.opacity="0";
 
-loader.style.display="none";
+        setTimeout(()=>{
 
-},600);
+            loader.style.display="none";
 
-});
+        },500);
 
-/* ==========================
-   BACK TO TOP
-========================== */
-
-const topButton=document.getElementById("backToTop");
-
-if(topButton){
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>500){
-
-topButton.style.display="block";
-
-}else{
-
-topButton.style.display="none";
-
-}
-
-});
-
-topButton.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
-
-}
-/* ==========================
-   ACTIVE NAVIGATION
-========================== */
-
-const currentPage=window.location.pathname.split("/").pop();
-
-document.querySelectorAll("nav a").forEach(link=>{
-
-const href=link.getAttribute("href");
-
-if(href===currentPage || (currentPage==="" && href==="index.html")){
-
-link.classList.add("active");
-
-}
+    }
 
 });
