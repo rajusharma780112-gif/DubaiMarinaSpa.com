@@ -125,3 +125,31 @@ document.querySelectorAll(".primary-btn,.book-btn").forEach(button=>{
     });
 
 });
+/* ==========================
+   MOBILE MENU
+========================== */
+
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+
+    navbar.classList.toggle("active");
+
+    menuToggle.classList.toggle("open");
+
+});
+
+/* Close menu after clicking a link */
+
+document.querySelectorAll("#navbar a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navbar.classList.remove("active");
+
+        menuToggle.classList.remove("open");
+
+    });
+
+});
