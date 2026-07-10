@@ -1258,3 +1258,111 @@ opacity:0;
 }
 
 }
+/* ===========================
+   MOBILE MENU
+=========================== */
+
+.menu-toggle{
+
+display:none;
+
+flex-direction:column;
+
+cursor:pointer;
+
+gap:6px;
+
+z-index:1001;
+
+}
+
+.menu-toggle span{
+
+width:28px;
+
+height:3px;
+
+background:#fff;
+
+border-radius:5px;
+
+transition:.3s;
+
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+
+display:flex;
+
+}
+
+nav{
+
+position:fixed;
+
+top:80px;
+
+right:-100%;
+
+width:260px;
+
+height:calc(100vh - 80px);
+
+background:#111;
+
+transition:.4s;
+
+padding:40px 25px;
+
+box-shadow:-10px 0 25px rgba(0,0,0,.3);
+
+}
+
+nav.active{
+
+right:0;
+
+}
+
+nav ul{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+nav a{
+
+font-size:18px;
+
+}
+
+.book-btn{
+
+display:none;
+
+}
+
+}
+.menu-toggle.open span:nth-child(1){
+
+transform:rotate(45deg) translateY(12px);
+
+}
+
+.menu-toggle.open span:nth-child(2){
+
+opacity:0;
+
+}
+
+.menu-toggle.open span:nth-child(3){
+
+transform:rotate(-45deg) translateY(-12px);
+
+}
