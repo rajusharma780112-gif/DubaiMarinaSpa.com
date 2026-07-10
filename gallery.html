@@ -4,91 +4,66 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gallery | Dubai Marina Spa</title>
 
-<meta name="description"
-content="Explore the luxury atmosphere of Dubai Marina Spa through our gallery featuring massage rooms, Moroccan bath, aromatherapy and premium wellness experiences.">
+<meta name="description" content="Explore the luxury interiors, massage rooms and premium spa experience at Dubai Marina Spa.">
 
-<meta name="keywords"
-content="Dubai Marina Spa Gallery, Luxury Spa Dubai, Massage Gallery Dubai">
+<link rel="canonical" href="https://dubai-marina-spa-com.vercel.app/gallery.html">
 
-<meta name="robots"
-content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="canonical"
-href="https://dubaimarinaspa.vercel.app/gallery.html">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<meta property="og:type"
-content="website">
-
-<meta property="og:title"
-content="Gallery | Dubai Marina Spa">
-
-<meta property="og:description"
-content="Take a look inside Dubai Marina Spa's luxury wellness experience.">
-
-<meta property="og:url"
-content="https://dubaimarinaspa.vercel.app/gallery.html">
-
-<meta property="og:image"
-content="https://dubaimarinaspa.vercel.app/images/gallery/spa1.jpg">
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- HEADER -->
+<div id="loader">
 
-<header class="header">
+<div class="loader-circle"></div>
+
+</div>
+
+<header>
 
 <div class="container">
 
-<a href="index.html"
-class="logo">
+<a href="index.html" class="logo">
 
 Dubai Marina <span>Spa</span>
 
 </a>
 
-<nav class="navbar">
+<div class="menu-toggle" id="menuToggle">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<nav id="navbar">
 
 <ul>
 
 <li><a href="index.html">Home</a></li>
-
 <li><a href="about.html">About</a></li>
-
 <li><a href="services.html">Services</a></li>
-
-<li><a href="gallery.html"
-class="active">Gallery</a></li>
-
+<li><a class="active" href="gallery.html">Gallery</a></li>
 <li><a href="contact.html">Contact</a></li>
 
 </ul>
 
 </nav>
 
-<a href="contact.html"
-class="book-btn">
+<a href="contact.html" class="book-btn">
 
-Book Appointment
+Book Now
 
 </a>
 
@@ -96,60 +71,77 @@ Book Appointment
 
 </header>
 
-<!-- HERO -->
+<section class="hero" style="min-height:70vh;">
 
-<section class="hero">
-
-<div class="hero-overlay"></div>
+<div class="container hero-grid">
 
 <div class="hero-content">
 
-<span class="hero-subtitle">
+<p class="section-subtitle">
 
-OUR GALLERY
+PHOTO GALLERY
 
-</span>
+</p>
 
 <h1>
 
-Luxury Spaces.<br>
-
-Lasting Impressions.
+Discover Our Luxury Spa
 
 </h1>
 
 <p>
 
-Discover our elegant interiors, relaxing treatment
-rooms, and premium wellness environment designed
-to help you unwind.
+Take a closer look at our elegant treatment rooms, relaxing atmosphere and premium wellness experience in Dubai Marina.
 
 </p>
+
+<a href="contact.html" class="primary-btn">
+
+Book Your Visit
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="hero.png"
+
+alt="Dubai Marina Spa Reception"
+
+loading="lazy">
+
+</div>
 
 </div>
 
 </section>
 
-<!-- GALLERY -->
+<!-- =========================
+GALLERY
+========================= -->
 
-<section>
+<section class="gallery-page">
 
 <div class="container">
 
-<div class="section-title">
+<div class="section-heading">
 
-<span>PHOTO GALLERY</span>
+<p class="section-subtitle">
+
+OUR GALLERY
+
+</p>
 
 <h2>
 
-A Look Inside Our Spa
+Luxury Spaces & Wellness Experiences
 
 </h2>
 
 <p>
 
-Browse our collection showcasing the luxurious
-atmosphere and relaxing experiences waiting for you.
+Every detail has been thoughtfully designed to create a calm, elegant and relaxing environment for our guests.
 
 </p>
 
@@ -157,254 +149,478 @@ atmosphere and relaxing experiences waiting for you.
 
 <div class="gallery-grid">
 
-<img src="images/gallery/spa1.jpg"
-alt="Luxury Spa Reception"
+<div class="gallery-card">
+
+<img src="model.png"
+
+alt="Luxury Massage Treatment"
+
 loading="lazy">
 
-<img src="images/gallery/spa2.jpg"
-alt="Massage Room"
+<div class="gallery-content">
+
+<h3>
+
+Professional Massage
+
+</h3>
+
+<p>
+
+Luxury massage treatments designed for complete relaxation.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="gallery-card">
+
+<img src="therapy.png"
+
+alt="Spa Therapy"
+
 loading="lazy">
 
-<img src="images/gallery/spa3.jpg"
-alt="Hot Stone Massage"
+<div class="gallery-content">
+
+<h3>
+
+Premium Wellness
+
+</h3>
+
+<p>
+
+Experience personalised treatments in a peaceful atmosphere.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="gallery-card">
+
+<img src="room.png"
+
+alt="Luxury Massage Room"
+
 loading="lazy">
 
-<img src="images/gallery/spa4.jpg"
-alt="Moroccan Bath"
+<div class="gallery-content">
+
+<h3>
+
+Private Treatment Room
+
+</h3>
+
+<p>
+
+Elegant private rooms designed for comfort and tranquillity.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="gallery-card">
+
+<img src="spa-products.png"
+
+alt="Luxury Spa Products"
+
 loading="lazy">
 
-<img src="images/gallery/spa5.jpg"
-alt="Aromatherapy Massage"
-loading="lazy">
+<div class="gallery-content">
 
-<img src="images/gallery/spa6.jpg"
-alt="Luxury Waiting Lounge"
-loading="lazy">
+<h3>
 
-<img src="images/services/massage.jpg"
-alt="Relaxation Massage"
-loading="lazy">
+Premium Spa Products
 
-<img src="images/services/aromatherapy.jpg"
-alt="Aromatherapy Treatment"
-loading="lazy">
+</h3>
 
-<img src="images/services/moroccan.jpg"
-alt="Moroccan Bath Room"
-loading="lazy">
+<p>
+
+High-quality oils and skincare products used during treatments.
+
+</p>
+
+</div>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
-<!-- ================= EXPERIENCE ================= -->
+<!-- =========================
+SPA EXPERIENCE
+========================= -->
 
-<section class="why-choose">
+<section class="experience">
 
-    <div class="container">
+<div class="container experience-grid">
 
-        <div class="section-title">
+<div class="experience-image">
 
-            <span>THE EXPERIENCE</span>
+<img
+src="therapy.png"
+alt="Luxury Spa Experience"
+loading="lazy">
 
-            <h2>
+</div>
 
-                More Than Just A Spa Visit
+<div class="experience-content">
 
-            </h2>
+<p class="section-subtitle">
 
-            <p>
+SPA EXPERIENCE
 
-                Every detail is thoughtfully designed to provide a calm,
-                elegant and unforgettable wellness experience.
+</p>
 
-            </p>
+<h2>
 
-        </div>
+More Than A Massage
 
-        <div class="features-grid">
+</h2>
 
-            <div class="feature-card">
+<p>
 
-                <div class="feature-icon">🕯️</div>
+Every visit is designed to provide complete relaxation in an elegant environment. Soft lighting, calming aromas and professional treatments work together to create an unforgettable wellness experience.
 
-                <h3>Relaxing Ambience</h3>
+</p>
 
-                <p>
+<p>
 
-                    Soft lighting, calming aromas and peaceful interiors
-                    create the perfect environment for complete relaxation.
+Whether you're visiting after a long flight, a busy working day or simply taking time for yourself, Dubai Marina Spa offers a peaceful retreat where comfort comes first.
 
-                </p>
+</p>
 
-            </div>
+<div class="experience-features">
 
-            <div class="feature-card">
+<div class="experience-box">
 
-                <div class="feature-icon">🌿</div>
+<h3>
 
-                <h3>Premium Products</h3>
+Private Rooms
 
-                <p>
+</h3>
 
-                    We use carefully selected oils and skincare products
-                    to deliver a luxurious wellness experience.
+<p>
 
-                </p>
+Enjoy every treatment in beautifully designed private massage suites.
 
-            </div>
+</p>
 
-            <div class="feature-card">
+</div>
 
-                <div class="feature-icon">✨</div>
+<div class="experience-box">
 
-                <h3>Luxury Comfort</h3>
+<h3>
 
-                <p>
+Premium Oils
 
-                    Elegant treatment rooms and professional therapists
-                    ensure every visit feels truly exceptional.
+</h3>
 
-                </p>
+<p>
 
-            </div>
+Only carefully selected massage oils and luxury skincare products are used.
 
-        </div>
+</p>
 
-    </div>
+</div>
+
+<div class="experience-box">
+
+<h3>
+
+Luxury Comfort
+
+</h3>
+
+<p>
+
+Elegant interiors designed to help you relax from the moment you arrive.
+
+</p>
+
+</div>
+
+<div class="experience-box">
+
+<h3>
+
+Daily Appointments
+
+</h3>
+
+<p>
+
+Available every day with flexible booking times.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- ================= BOOKING CTA ================= -->
+<!-- =========================
+CLIENT REVIEWS
+========================= -->
 
-<section class="booking-cta">
+<section class="testimonials">
 
-    <div class="container">
+<div class="container">
 
-        <h2>
+<div class="section-heading">
 
-            Experience Luxury Wellness Today
+<p class="section-subtitle">
 
-        </h2>
+GUEST REVIEWS
 
-        <p>
+</p>
 
-            Explore our premium treatments and enjoy a relaxing spa
-            experience starting from <strong>AED 200</strong>.
+<h2>
 
-        </p>
+What Guests Love
 
-        <a href="contact.html" class="btn">
+</h2>
 
-            Book Appointment
+<p>
 
-        </a>
+Our visitors appreciate the peaceful atmosphere, luxury surroundings and relaxing treatments.
 
-    </div>
+</p>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+"The spa is beautifully designed and incredibly relaxing. Everything felt luxurious from start to finish."
+
+</p>
+
+<h4>
+
+James — UK
+
+</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+"The treatment room was spotless and elegant. One of the most relaxing massage experiences I've had in Dubai."
+
+</p>
+
+<h4>
+
+Maya — UAE
+
+</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+<p>
+
+"Professional service, calming atmosphere and excellent attention to detail. Highly recommended."
+
+</p>
+
+<h4>
+
+Daniel — Germany
+
+</h4>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
-<!-- ================= FOOTER ================= -->
+
+<!-- =========================
+CALL TO ACTION
+========================= -->
+
+<section class="cta-banner">
+
+<div class="container">
+
+<h2>
+
+Ready To Experience Dubai Marina Spa?
+
+</h2>
+
+<p>
+
+Browse our treatments and reserve your appointment today for a luxurious wellness experience.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="services.html" class="primary-btn">
+
+View Services
+
+</a>
+
+<a href="contact.html" class="secondary-btn">
+
+Book Now
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
 
 <footer>
 
-    <div class="container">
+<div class="container footer-grid">
 
-        <div class="footer-grid">
+<div>
 
-            <div>
+<h3>
 
-                <h3>Dubai Marina Spa</h3>
+Dubai Marina Spa
 
-                <p>
+</h3>
 
-                    Discover premium massage, wellness and luxury spa
-                    experiences in Dubai Marina. Designed to help you
-                    relax, refresh and rejuvenate.
+<p>
 
-                </p>
+Luxury wellness, massage and relaxation in the heart of Dubai Marina.
 
-            </div>
+</p>
 
-            <div>
+</div>
 
-                <h3>Quick Links</h3>
+<div>
 
-                <ul>
+<h3>
 
-                    <li><a href="index.html">Home</a></li>
+Quick Links
 
-                    <li><a href="about.html">About</a></li>
+</h3>
 
-                    <li><a href="services.html">Services</a></li>
+<ul>
 
-                    <li><a href="gallery.html">Gallery</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
 
-                    <li><a href="contact.html">Contact</a></li>
+</ul>
 
-                </ul>
+</div>
 
-            </div>
+<div>
 
-            <div>
+<h3>
 
-                <h3>Opening Hours</h3>
+Treatments
 
-                <p>Monday – Sunday</p>
+</h3>
 
-                <p>10:00 AM – 11:00 PM</p>
+<ul>
 
-            </div>
+<li>Thai Massage</li>
+<li>Deep Tissue Massage</li>
+<li>Aromatherapy</li>
+<li>Moroccan Bath</li>
 
-            <div>
+</ul>
 
-                <h3>Location</h3>
+</div>
 
-                <p>
+<div>
 
-                    Dubai Marina<br>
-                    Dubai, United Arab Emirates
+<h3>
 
-                </p>
+Opening Hours
 
-                <p>
+</h3>
 
-                    Email:<br>
-                    info@dubaimarinaspa.com
+<p>
 
-                </p>
+Daily
 
-            </div>
+</p>
 
-        </div>
+<p>
 
-        <hr>
+10:00 AM – 11:00 PM
 
-        <p class="copyright">
+</p>
 
-            © 2026 Dubai Marina Spa. All Rights Reserved.
+</div>
 
-        </p>
+</div>
 
-    </div>
+<div class="copyright">
+
+© 2026 Dubai Marina Spa. All Rights Reserved.
+
+</div>
 
 </footer>
 
-<!-- ================= IMAGE GALLERY SCHEMA ================= -->
-
-<script type="application/ld+json">
-
-{
-  "@context":"https://schema.org",
-  "@type":"ImageGallery",
-  "name":"Dubai Marina Spa Gallery",
-  "url":"https://dubaimarinaspa.vercel.app/gallery.html",
-  "description":"Luxury spa gallery featuring massage rooms, Moroccan bath, aromatherapy and wellness experiences in Dubai Marina."
-}
-
-</script>
-
 <script src="script.js"></script>
+
+<button id="backToTop">
+
+↑
+
+</button>
 
 </body>
 
