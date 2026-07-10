@@ -1,389 +1,127 @@
-/* ==========================================
-   DUBAI MARINA SPA
-   LUXURY VERSION 2.0
-========================================== */
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    /* ==========================================
-       STICKY HEADER
-    ========================================== */
-
-    const header = document.querySelector(".header");
-
-    window.addEventListener("scroll", () => {
-
-        if(window.scrollY > 60){
-
-            header.classList.add("scrolled");
-
-        }else{
-
-            header.classList.remove("scrolled");
-
-        }
-
-    });
-
-    /* ==========================================
-       ACTIVE NAVIGATION
-    ========================================== */
-
-    const currentPage = window.location.pathname.split("/").pop();
-
-    document.querySelectorAll(".navbar a").forEach(link=>{
-
-        const href = link.getAttribute("href");
-
-        if(href === currentPage || (currentPage==="" && href==="index.html")){
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-    /* ==========================================
-       SMOOTH PAGE FADE
-    ========================================== */
-
-    document.body.style.opacity = "0";
-
-    window.addEventListener("load",()=>{
-
-        document.body.style.transition="opacity .6s ease";
-
-        document.body.style.opacity="1";
-
-    });
-
-    /* ==========================================
-       SCROLL REVEAL
-    ========================================== */
-
-    const revealItems = document.querySelectorAll(
-
-        ".feature-card,.service-card,.testimonial-card,.stat-card,.gallery-grid img"
-
-    );
-
-    const reveal = ()=>{
-
-        revealItems.forEach(item=>{
-
-            const top = item.getBoundingClientRect().top;
-
-            const visible = window.innerHeight - 100;
-
-            if(top < visible){
-
-                item.classList.add("show");
-
-            }
-
-        });
-
-    };
-
-    reveal();
-
-    window.addEventListener("scroll",reveal);
-
-});
-/* ==========================================
-   ANIMATED COUNTERS
-========================================== */
-
-const counters = document.querySelectorAll(".stat-card h2");
-
-const counterObserver = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (!entry.isIntersecting) return;
-
-        const counter = entry.target;
-
-        const text = counter.innerText;
-
-        const target = parseInt(text.replace(/\D/g, ""));
-
-        if (isNaN(target)) return;
-
-        let current = 0;
-
-        const increment = Math.ceil(target / 80);
-
-        const updateCounter = () => {
-
-            current += increment;
-
-            if (current >= target) {
-
-                counter.innerText = text;
-
-            } else {
-
-                if (text.includes("+")) {
-
-                    counter.innerText = current + "+";
-
-                } else {
-
-                    counter.innerText = current;
-
-                }
-
-                requestAnimationFrame(updateCounter);
-
-            }
-
-        };
-
-        updateCounter();
-
-        counterObserver.unobserve(counter);
-
-    });
-
-}, {
-
-    threshold: 0.5
-
-});
-
-counters.forEach(counter => {
-
-    counterObserver.observe(counter);
-
-});
-
-
-/* ==========================================
-   FLOATING BOOK BUTTON
-========================================== */
-
-const floatingButton = document.createElement("a");
-
-floatingButton.href = "contact.html";
-
-floatingButton.className = "floating-book";
-
-floatingButton.innerHTML = "📅 Book Now";
-
-document.body.appendChild(floatingButton);
-
-
-/* ==========================================
-   BACK TO TOP BUTTON
-========================================== */
-
-const backToTop = document.createElement("button");
-
-backToTop.id = "backToTop";
-
-backToTop.innerHTML = "↑";
-
-document.body.appendChild(backToTop);
+/* ==========================
+   STICKY HEADER
+========================== */
+
+const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 500) {
+    if (window.scrollY > 80) {
 
-        backToTop.style.display = "block";
+        header.style.background = "rgba(8,8,8,.96)";
+        header.style.boxShadow = "0 8px 30px rgba(0,0,0,.35)";
 
     } else {
 
-        backToTop.style.display = "none";
+        header.style.background = "rgba(12,12,12,.88)";
+        header.style.boxShadow = "none";
 
     }
 
 });
 
-backToTop.addEventListener("click", () => {
 
-    window.scrollTo({
+/* ==========================
+   SMOOTH SCROLL
+========================== */
 
-        top: 0,
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-        behavior: "smooth"
+    anchor.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
 
     });
 
 });
 
 
-/* ==========================================
-   BUTTON HOVER EFFECT
-========================================== */
+/* ==========================
+   FADE ANIMATION
+========================== */
 
-document.querySelectorAll(".btn,.book-btn,.small-btn").forEach(button => {
+const observer = new IntersectionObserver((entries)=>{
 
-    button.addEventListener("mouseenter", () => {
+    entries.forEach(entry=>{
 
-        button.style.transform = "translateY(-4px)";
-
-    });
-
-    button.addEventListener("mouseleave", () => {
-
-        button.style.transform = "translateY(0)";
-
-    });
-
-});
-/* ==========================================
-   GALLERY LIGHTBOX
-========================================== */
-
-const galleryImages = document.querySelectorAll(".gallery-grid img");
-
-if (galleryImages.length > 0) {
-
-    const lightbox = document.createElement("div");
-    lightbox.id = "lightbox";
-
-    lightbox.innerHTML = `
-        <span id="closeLightbox">&times;</span>
-        <img id="lightboxImage" src="" alt="Spa Image">
-    `;
-
-    document.body.appendChild(lightbox);
-
-    const lightboxImage = document.getElementById("lightboxImage");
-    const closeLightbox = document.getElementById("closeLightbox");
-
-    galleryImages.forEach(image => {
-
-        image.addEventListener("click", () => {
-
-            lightbox.style.display = "flex";
-            lightboxImage.src = image.src;
-            document.body.style.overflow = "hidden";
-
-        });
-
-    });
-
-    closeLightbox.addEventListener("click", () => {
-
-        lightbox.style.display = "none";
-        document.body.style.overflow = "auto";
-
-    });
-
-    lightbox.addEventListener("click", e => {
-
-        if (e.target === lightbox) {
-
-            lightbox.style.display = "none";
-            document.body.style.overflow = "auto";
-
-        }
-
-    });
-
-    document.addEventListener("keydown", e => {
-
-        if (e.key === "Escape") {
-
-            lightbox.style.display = "none";
-            document.body.style.overflow = "auto";
-
-        }
-
-    });
-
-}
-
-/* ==========================================
-   CONTACT FORM VALIDATION
-========================================== */
-
-const form = document.querySelector("form");
-
-if (form) {
-
-    form.addEventListener("submit", function (e) {
-
-        const name = document.querySelector('input[name="Full Name"]');
-        const email = document.querySelector('input[name="Email"]');
-
-        if (name && name.value.trim().length < 3) {
-
-            alert("Please enter your full name.");
-
-            e.preventDefault();
-
-            return;
-
-        }
-
-        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-
-            alert("Please enter a valid email address.");
-
-            e.preventDefault();
-
-            return;
-
-        }
-
-    });
-
-}
-
-/* ==========================================
-   IMAGE FADE-IN
-========================================== */
-
-const images = document.querySelectorAll("img");
-
-const imageObserver = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting){
 
             entry.target.classList.add("show");
 
-            imageObserver.unobserve(entry.target);
-
         }
 
     });
 
-}, {
+},{
+    threshold:0.15
+});
 
-    threshold: 0.2
+document.querySelectorAll("section").forEach(section=>{
+
+    section.classList.add("hidden");
+
+    observer.observe(section);
 
 });
 
-images.forEach(image => {
 
-    imageObserver.observe(image);
+/* ==========================
+   IMAGE HOVER EFFECT
+========================== */
 
-});
+document.querySelectorAll("img").forEach(image=>{
 
-/* ==========================================
-   PREVENT DOUBLE FORM SUBMISSION
-========================================== */
+    image.addEventListener("mouseenter",()=>{
 
-if (form) {
-
-    form.addEventListener("submit", () => {
-
-        const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
-
-        if (submitButton) {
-
-            submitButton.disabled = true;
-            submitButton.innerText = "Sending...";
-
-        }
+        image.style.transform="scale(1.03)";
 
     });
 
-}
+    image.addEventListener("mouseleave",()=>{
 
-console.log("Dubai Marina Spa Luxury Version Loaded");
+        image.style.transform="scale(1)";
+
+    });
+
+});
+
+
+/* ==========================
+   BUTTON RIPPLE EFFECT
+========================== */
+
+document.querySelectorAll(".primary-btn,.book-btn").forEach(button=>{
+
+    button.addEventListener("click",function(e){
+
+        let ripple=document.createElement("span");
+
+        ripple.className="ripple";
+
+        ripple.style.left=e.offsetX+"px";
+
+        ripple.style.top=e.offsetY+"px";
+
+        this.appendChild(ripple);
+
+        setTimeout(()=>{
+
+            ripple.remove();
+
+        },600);
+
+    });
+
+});
