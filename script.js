@@ -153,3 +153,70 @@ document.querySelectorAll("#navbar a").forEach(link => {
     });
 
 });
+/* ==========================
+   PAGE LOADER
+========================== */
+
+window.addEventListener("load",()=>{
+
+const loader=document.getElementById("loader");
+
+loader.style.opacity="0";
+
+setTimeout(()=>{
+
+loader.style.display="none";
+
+},600);
+
+});
+
+/* ==========================
+   BACK TO TOP
+========================== */
+
+const topButton=document.getElementById("backToTop");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>500){
+
+topButton.style.display="block";
+
+}else{
+
+topButton.style.display="none";
+
+}
+
+});
+
+topButton.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+/* ==========================
+   ACTIVE NAVIGATION
+========================== */
+
+const currentPage=window.location.pathname.split("/").pop();
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+const href=link.getAttribute("href");
+
+if(href===currentPage || (currentPage==="" && href==="index.html")){
+
+link.classList.add("active");
+
+}
+
+});
