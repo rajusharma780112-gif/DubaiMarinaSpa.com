@@ -4,56 +4,32 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Book Appointment | Dubai Marina Spa</title>
+<title>Contact Dubai Marina Spa | Book Your Massage</title>
 
-<meta name="description"
-content="Book your luxury massage or spa treatment at Dubai Marina Spa. Professional therapists, premium wellness treatments and easy online booking.">
+<meta name="description" content="Book your luxury massage at Dubai Marina Spa. Contact us by phone, email or visit our relaxing spa in Dubai Marina.">
 
-<meta name="keywords"
-content="Book Spa Dubai, Massage Booking Dubai Marina, Luxury Spa Appointment Dubai">
+<link rel="canonical" href="https://dubai-marina-spa-com.vercel.app/contact.html">
 
-<meta name="robots"
-content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="canonical"
-href="https://dubaimarinaspa.vercel.app/contact.html">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<meta property="og:type"
-content="website">
-
-<meta property="og:title"
-content="Book Appointment | Dubai Marina Spa">
-
-<meta property="og:description"
-content="Book your luxury spa experience today. Treatments starting from AED 200.">
-
-<meta property="og:url"
-content="https://dubaimarinaspa.vercel.app/contact.html">
-
-<meta property="og:image"
-content="https://dubaimarinaspa.vercel.app/images/hero.jpg">
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<header class="header">
+<div id="loader">
+
+<div class="loader-circle"></div>
+
+</div>
+
+<header>
 
 <div class="container">
 
@@ -63,19 +39,23 @@ Dubai Marina <span>Spa</span>
 
 </a>
 
-<nav class="navbar">
+<div class="menu-toggle" id="menuToggle">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<nav id="navbar">
 
 <ul>
 
 <li><a href="index.html">Home</a></li>
-
 <li><a href="about.html">About</a></li>
-
 <li><a href="services.html">Services</a></li>
-
 <li><a href="gallery.html">Gallery</a></li>
-
-<li><a href="contact.html" class="active">Contact</a></li>
+<li><a class="active" href="contact.html">Contact</a></li>
 
 </ul>
 
@@ -83,7 +63,7 @@ Dubai Marina <span>Spa</span>
 
 <a href="contact.html" class="book-btn">
 
-Book Appointment
+Book Now
 
 </a>
 
@@ -91,41 +71,45 @@ Book Appointment
 
 </header>
 
-<!-- HERO -->
+<section class="hero" style="min-height:65vh;">
 
-<section class="hero">
-
-<div class="hero-overlay"></div>
+<div class="container hero-grid">
 
 <div class="hero-content">
 
-<span class="hero-subtitle">
+<p class="section-subtitle">
 
-BOOK YOUR EXPERIENCE
+CONTACT US
 
-</span>
+</p>
 
 <h1>
 
-Relax.<br>
-
-Recharge.<br>
-
-Reserve.
+Book Your Luxury Spa Experience
 
 </h1>
 
 <p>
 
-Book your luxury spa treatment in just a few
-minutes. Our team will contact you to confirm
-your appointment.
+We're here to help you relax. Contact us to reserve your preferred treatment or ask any questions about our services.
 
 </p>
 
-<div class="hero-price">
+<a href="#booking" class="primary-btn">
 
-From <strong>AED 200</strong>
+Book Appointment
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="hero.png"
+
+alt="Dubai Marina Spa Reception"
+
+loading="lazy">
 
 </div>
 
@@ -133,241 +117,206 @@ From <strong>AED 200</strong>
 
 </section>
 
-<!-- CONTACT FORM -->
+<!-- =========================
+CONTACT DETAILS
+========================= -->
 
-<section>
+<section class="contact-preview">
 
-<div class="container">
+<div class="container contact-grid">
 
-<div class="section-title">
+<div>
 
-<span>BOOK NOW</span>
+<p class="section-subtitle">
 
-<h2>
-
-Schedule Your Appointment
-
-</h2>
-
-<p>
-
-Complete the form below and we'll get back to
-you as soon as possible.
+GET IN TOUCH
 
 </p>
 
-</div>
+<h2>
 
-<form action="https://formsubmit.co/YOUR_EMAIL@example.com"
-method="POST">
+We'd Love To Hear From You
 
-<input type="hidden"
-name="_subject"
-value="New Spa Booking">
+</h2>
 
-<input type="hidden"
-name="_captcha"
-value="false">
+<div class="contact-info">
 
-<input type="hidden"
-name="_template"
-value="table">
+<p><strong>📍 Address:</strong> Dubai Marina, Dubai, UAE</p>
 
-<div class="services-grid">
+<p><strong>📞 Phone:</strong> +971 XX XXX XXXX</p>
 
-<div>
+<p><strong>📧 Email:</strong> info@dubaimarinaspa.com</p>
 
-<label>Full Name</label>
-
-<input
-type="text"
-name="Full Name"
-required>
+<p><strong>🕙 Hours:</strong> Daily 10:00 AM – 11:00 PM</p>
 
 </div>
 
-<div>
+</div>
 
-<label>Email Address</label>
+<div class="contact-card">
 
-<input
-type="email"
-name="Email"
-required>
+<h3>
+
+Need Immediate Assistance?
+
+</h3>
+
+<p>
+
+Contact our team to check availability or book your preferred massage session.
+
+</p>
+
+<a href="tel:+971000000000" class="primary-btn">
+
+Call Now
+
+</a>
 
 </div>
 
-<div>
+</div>
 
-<label>Select Service</label>
+</section>
 
-<select name="Service">
+<!-- =========================
+BOOKING FORM
+========================= -->
 
-<option>Relaxation Massage</option>
+<section class="about-home" id="booking">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-subtitle">
+
+BOOK APPOINTMENT
+
+</p>
+
+<h2>
+
+Request Your Booking
+
+</h2>
+
+</div>
+
+<form class="booking-form">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+
+<option value="">Select Treatment</option>
+
+<option>Thai Massage</option>
 
 <option>Deep Tissue Massage</option>
 
+<option>Aromatherapy Massage</option>
+
 <option>Moroccan Bath</option>
-
-<option>Hot Stone Massage</option>
-
-<option>Luxury Facial</option>
 
 <option>Couples Massage</option>
 
 </select>
 
-</div>
+<input type="date" required>
 
-<div>
+<textarea rows="6" placeholder="Additional Requests"></textarea>
 
-<label>Preferred Date</label>
+<button class="primary-btn" type="submit">
 
-<input
-type="date"
-name="Preferred Date"
-required>
-
-</div>
-<div>
-
-<label>Preferred Time</label>
-
-<input
-type="time"
-name="Preferred Time"
-required>
-
-</div>
-
-<div style="grid-column:1/-1;">
-
-<label>Special Requests</label>
-
-<textarea
-name="Message"
-rows="6"
-placeholder="Tell us about your preferred treatment or any special requests..."></textarea>
-
-</div>
-
-</div>
-
-<div class="text-center mt-4">
-
-<button
-type="submit"
-class="btn">
-
-Book Appointment
+Request Booking
 
 </button>
-
-</div>
 
 </form>
 
 </div>
 
 </section>
+<!-- =========================
+LOCATION
+========================= -->
 
-<!-- ================= CONTACT INFO ================= -->
+<section class="luxury-room">
 
-<section class="why-choose">
+<div class="container room-grid">
 
-<div class="container">
+<div class="room-content">
 
-<div class="section-title">
+<p class="section-subtitle">
 
-<span>CONTACT US</span>
+VISIT US
+
+</p>
 
 <h2>
 
-We're Here To Help
+Located In The Heart Of Dubai Marina
 
 </h2>
 
 <p>
 
-Reach out to us for bookings, enquiries or
-additional information about our luxury spa
-services.
+Our spa is conveniently located in Dubai Marina, making it easy to visit whether you're a resident or enjoying your stay in Dubai.
 
 </p>
-
-</div>
-
-<div class="features-grid">
-
-<div class="feature-card">
-
-<div class="feature-icon">
-
-📍
-
-</div>
-
-<h3>
-
-Location
-
-</h3>
 
 <p>
 
-Dubai Marina<br>
-
-Dubai, United Arab Emirates
+We recommend booking in advance to ensure your preferred treatment and appointment time are available.
 
 </p>
 
-</div>
+<div class="room-features">
 
-<div class="feature-card">
+<div class="room-feature">
 
-<div class="feature-icon">
-
-✉️
+Easy Parking
 
 </div>
 
-<h3>
+<div class="room-feature">
 
-Email
-
-</h3>
-
-<p>
-
-info@dubaimarinaspa.com
-
-</p>
+Private Rooms
 
 </div>
 
-<div class="feature-card">
+<div class="room-feature">
 
-<div class="feature-icon">
-
-🕒
+Open Daily
 
 </div>
 
-<h3>
+<div class="room-feature">
 
-Opening Hours
-
-</h3>
-
-<p>
-
-Monday – Sunday<br>
-
-10:00 AM – 11:00 PM
-
-</p>
+Luxury Facilities
 
 </div>
+
+</div>
+
+</div>
+
+<div class="room-image">
+
+<iframe
+src="https://www.google.com/maps?q=Dubai%20Marina%20Dubai&output=embed"
+width="100%"
+height="450"
+style="border:0;border-radius:25px;"
+loading="lazy"
+allowfullscreen>
+
+</iframe>
 
 </div>
 
@@ -375,15 +324,21 @@ Monday – Sunday<br>
 
 </section>
 
-<!-- ================= FAQ ================= -->
+<!-- =========================
+FAQ
+========================= -->
 
-<section>
+<section class="faq">
 
 <div class="container">
 
-<div class="section-title">
+<div class="section-heading">
 
-<span>FAQ</span>
+<p class="section-subtitle">
+
+QUESTIONS
+
+</p>
 
 <h2>
 
@@ -393,54 +348,67 @@ Frequently Asked Questions
 
 </div>
 
-<div class="features-grid">
+<div class="faq-grid">
 
-<div class="feature-card">
+<div class="faq-item">
 
 <h3>
 
-Do I need an appointment?
+How do I book?
 
 </h3>
 
 <p>
 
-Appointments are recommended to ensure your
-preferred date and time are available.
+You can submit the booking form, call us directly or contact us through WhatsApp.
 
 </p>
 
 </div>
 
-<div class="feature-card">
+<div class="faq-item">
 
 <h3>
 
-What should I wear?
+Can I book on the same day?
 
 </h3>
 
 <p>
 
-Comfortable clothing is recommended. Robes
-and towels will be provided during your visit.
+Yes, subject to availability. Advance booking is recommended.
 
 </p>
 
 </div>
 
-<div class="feature-card">
+<div class="faq-item">
 
 <h3>
 
-When should I arrive?
+Do you accept walk-ins?
 
 </h3>
 
 <p>
 
-Please arrive around 10–15 minutes before
-your appointment to enjoy a relaxed check-in.
+Walk-ins are welcome whenever appointments are available.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+What payment methods are accepted?
+
+</h3>
+
+<p>
+
+Cash and major credit/debit cards are accepted.
 
 </p>
 
@@ -452,156 +420,171 @@ your appointment to enjoy a relaxed check-in.
 
 </section>
 
-<!-- ================= CTA ================= -->
+<!-- =========================
+CALL TO ACTION
+========================= -->
 
-<section class="booking-cta">
+<section class="cta-banner">
 
 <div class="container">
 
 <h2>
 
-Your Relaxation Starts Today
+Relax. Recharge. Feel Your Best.
 
 </h2>
 
 <p>
 
-Book your luxury spa experience today and
-enjoy premium treatments starting from
-<strong>AED 200</strong>.
+Reserve your luxury massage today and enjoy a premium wellness experience in Dubai Marina.
 
 </p>
 
-<a
-href="contact.html"
-class="btn">
+<div class="hero-buttons">
 
-Book Appointment
+<a href="tel:+971000000000" class="primary-btn">
+
+Call Now
+
+</a>
+
+<a href="services.html" class="secondary-btn">
+
+View Treatments
 
 </a>
 
 </div>
 
+</div>
+
 </section>
-<!-- ================= FOOTER ================= -->
+
+<!-- =========================
+FOOTER
+========================= -->
 
 <footer>
 
-    <div class="container">
+<div class="container footer-grid">
 
-        <div class="footer-grid">
+<div>
 
-            <div>
+<h3>
 
-                <h3>Dubai Marina Spa</h3>
+Dubai Marina Spa
 
-                <p>
+</h3>
 
-                    Experience luxury wellness, massage and spa
-                    treatments in the heart of Dubai Marina. We are
-                    committed to delivering relaxation, comfort and
-                    exceptional service.
+<p>
 
-                </p>
+Luxury massage and wellness experiences in Dubai Marina.
 
-            </div>
+</p>
 
-            <div>
+</div>
 
-                <h3>Quick Links</h3>
+<div>
 
-                <ul>
+<h3>
 
-                    <li><a href="index.html">Home</a></li>
+Quick Links
 
-                    <li><a href="about.html">About</a></li>
+</h3>
 
-                    <li><a href="services.html">Services</a></li>
+<ul>
 
-                    <li><a href="gallery.html">Gallery</a></li>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
 
-                    <li><a href="contact.html">Book Appointment</a></li>
+</ul>
 
-                </ul>
+</div>
 
-            </div>
+<div>
 
-            <div>
+<h3>
 
-                <h3>Opening Hours</h3>
+Massage Services
 
-                <p>
+</h3>
 
-                    Monday – Sunday
+<ul>
 
-                </p>
+<li>Thai Massage</li>
+<li>Deep Tissue Massage</li>
+<li>Aromatherapy Massage</li>
+<li>Moroccan Bath</li>
 
-                <p>
+</ul>
 
-                    10:00 AM – 11:00 PM
+</div>
 
-                </p>
+<div>
 
-            </div>
+<h3>
 
-            <div>
+Opening Hours
 
-                <h3>Location</h3>
+</h3>
 
-                <p>
+<p>
 
-                    Dubai Marina<br>
-                    Dubai, United Arab Emirates
+Monday – Sunday
 
-                </p>
+</p>
 
-                <p>
+<p>
 
-                    Email:<br>
+10:00 AM – 11:00 PM
 
-                    info@dubaimarinaspa.com
+</p>
 
-                </p>
+</div>
 
-            </div>
+</div>
 
-        </div>
+<div class="copyright">
 
-        <hr>
+© 2026 Dubai Marina Spa. All Rights Reserved.
 
-        <p class="copyright">
-
-            © 2026 Dubai Marina Spa. All Rights Reserved.
-
-        </p>
-
-    </div>
+</div>
 
 </footer>
 
-<!-- ================= LOCAL BUSINESS SCHEMA ================= -->
+<!-- =========================
+LOCAL BUSINESS SCHEMA
+========================= -->
 
 <script type="application/ld+json">
-
 {
-  "@context":"https://schema.org",
-  "@type":"DaySpa",
-  "name":"Dubai Marina Spa",
-  "url":"https://dubaimarinaspa.vercel.app/contact.html",
-  "description":"Book luxury massage and wellness treatments at Dubai Marina Spa.",
-  "priceRange":"AED 200+",
-  "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Dubai Marina",
-      "addressRegion":"Dubai",
-      "addressCountry":"AE"
-  },
-  "email":"info@dubaimarinaspa.com"
+"@context":"https://schema.org",
+"@type":"DaySpa",
+"name":"Dubai Marina Spa",
+"description":"Luxury massage and wellness spa in Dubai Marina.",
+"url":"https://dubai-marina-spa-com.vercel.app",
+"telephone":"+971XXXXXXXXX",
+"priceRange":"AED 200+",
+"address":{
+"@type":"PostalAddress",
+"addressLocality":"Dubai Marina",
+"addressRegion":"Dubai",
+"addressCountry":"AE"
+},
+"openingHours":"Mo-Su 10:00-23:00"
 }
-
 </script>
 
 <script src="script.js"></script>
+
+<button id="backToTop">
+
+↑
+
+</button>
 
 </body>
 
