@@ -308,11 +308,31 @@ color:var(--gold);
 
 }
 
+.hero-image{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
 .hero-image img{
 
 width:100%;
+max-width:520px;
+height:650px;
+object-fit:cover;
 border-radius:30px;
 box-shadow:var(--shadow);
+transition:.4s ease;
+
+}
+
+.hero-image img:hover{
+
+transform:scale(1.03);
+
+}
 
 }
 /* ===================================================
@@ -1236,7 +1256,18 @@ grid-template-columns:1fr;
 grid-template-columns:1fr;
 
 }
+.hero-image{
 
+margin-top:40px;
+
+}
+
+.hero-image img{
+
+max-width:450px;
+height:550px;
+
+}
 }
 /* ==========================================
 SECTION ANIMATION
