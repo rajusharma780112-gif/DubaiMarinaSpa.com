@@ -7,10 +7,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact Dubai Marina Spa | Book Your Luxury Massage</title>
+<title>Contact | Dubai Marina Spa</title>
 
 <meta name="description"
-content="Book your luxury massage appointment at Dubai Marina Spa. Contact our wellness experts and reserve your relaxing spa experience today.">
+content="Book your luxury massage at Dubai Marina Spa. Reserve Thai Massage, Deep Tissue Massage, Moroccan Bath and premium wellness treatments.">
 
 <link rel="canonical"
 href="https://dubai-marina-spa-com.vercel.app/contact.html">
@@ -32,33 +32,21 @@ href="style.css">
 
 <body>
 
-<!-- =========================
-LOADER
-========================= -->
-
 <div id="loader">
-
 <div class="loader-circle"></div>
-
 </div>
-
-<!-- =========================
-HEADER
-========================= -->
 
 <header>
 
 <div class="container">
 
-<a href="index.html"
-class="logo">
+<a href="index.html" class="logo">
 
 Dubai Marina <span>Spa</span>
 
 </a>
 
-<div class="menu-toggle"
-id="menuToggle">
+<div class="menu-toggle" id="menuToggle">
 
 <span></span>
 <span></span>
@@ -78,15 +66,13 @@ id="menuToggle">
 
 <li><a href="gallery.html">Gallery</a></li>
 
-<li><a class="active"
-href="contact.html">Contact</a></li>
+<li><a class="active" href="contact.html">Contact</a></li>
 
 </ul>
 
 </nav>
 
-<a href="contact.html"
-class="book-btn">
+<a href="#booking" class="book-btn">
 
 Book Now
 
@@ -96,9 +82,7 @@ Book Now
 
 </header>
 
-<!-- =========================
-HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -114,13 +98,13 @@ CONTACT DUBAI MARINA SPA
 
 <h1>
 
-Reserve Your Luxury Spa Experience
+Reserve Your Luxury Wellness Experience
 
 </h1>
 
 <p>
 
-Whether you're planning a relaxing massage, Moroccan Bath or wellness treatment, our team is ready to welcome you with exceptional care in an elegant spa environment.
+Experience complete relaxation with our premium massage treatments in an elegant spa environment. Reserve your appointment today and let our experienced therapists take care of the rest.
 
 </p>
 
@@ -136,7 +120,7 @@ Book Appointment
 <a href="services.html"
 class="secondary-btn">
 
-View Treatments
+View Services
 
 </a>
 
@@ -176,7 +160,7 @@ View Treatments
 
 <img
 src="therapist.png"
-alt="Professional therapist at Dubai Marina Spa"
+alt="Luxury Spa Therapist"
 loading="lazy">
 
 </div>
@@ -185,16 +169,14 @@ loading="lazy">
 
 </section>
 <!-- =========================
-BOOKING & CONTACT
+BOOKING SECTION
 ========================= -->
 
-<section class="contact-section" id="booking">
+<section class="booking-section" id="booking">
 
-<div class="container contact-layout">
+<div class="container">
 
-<!-- BOOKING FORM -->
-
-<div class="booking-card">
+<div class="booking-header">
 
 <p class="section-subtitle">
 
@@ -210,26 +192,30 @@ Reserve Your Appointment
 
 <p>
 
-Complete the booking form below and our team will contact you shortly to confirm your preferred appointment.
+Complete the booking form below and our team will contact you shortly to confirm your preferred appointment. We recommend booking in advance to secure your preferred treatment and time.
 
 </p>
 
-<form
-class="luxury-form"
-action="https://formsubmit.co/YOUR_EMAIL@example.com"
-method="POST">
+</div>
 
-<input type="hidden" name="_subject" value="New Booking Request - Dubai Marina Spa">
+<div class="booking-card">
+
+<form
+action="https://formsubmit.co/YOUR_EMAIL@example.com"
+method="POST"
+class="booking-form">
+
+<input type="hidden" name="_subject" value="Dubai Marina Spa Booking">
 
 <input type="hidden" name="_captcha" value="false">
 
 <input type="hidden" name="_template" value="table">
 
-<div class="form-row">
+<div class="booking-row">
 
-<div class="input-group">
+<div class="booking-field">
 
-<label>Full Name</label>
+<label>Full Name *</label>
 
 <input
 type="text"
@@ -239,9 +225,9 @@ required>
 
 </div>
 
-<div class="input-group">
+<div class="booking-field">
 
-<label>Phone Number</label>
+<label>Phone Number *</label>
 
 <input
 type="tel"
@@ -253,29 +239,29 @@ required>
 
 </div>
 
-<div class="form-row">
+<div class="booking-row">
 
-<div class="input-group">
+<div class="booking-field">
 
-<label>Email Address</label>
+<label>Email Address *</label>
 
 <input
 type="email"
 name="Email"
-placeholder="your@email.com"
+placeholder="Enter your email"
 required>
 
 </div>
 
-<div class="input-group">
+<div class="booking-field">
 
-<label>Treatment</label>
+<label>Select Treatment *</label>
 
 <select
 name="Treatment"
 required>
 
-<option value="">Choose Treatment</option>
+<option value="">Choose a treatment</option>
 
 <option>Thai Massage</option>
 
@@ -295,11 +281,11 @@ required>
 
 </div>
 
-<div class="form-row">
+<div class="booking-row">
 
-<div class="input-group">
+<div class="booking-field">
 
-<label>Preferred Date</label>
+<label>Preferred Date *</label>
 
 <input
 type="date"
@@ -308,9 +294,9 @@ required>
 
 </div>
 
-<div class="input-group">
+<div class="booking-field">
 
-<label>Preferred Time</label>
+<label>Preferred Time *</label>
 
 <input
 type="time"
@@ -321,20 +307,20 @@ required>
 
 </div>
 
-<div class="input-group">
+<div class="booking-field">
 
-<label>Your Message</label>
+<label>Additional Information</label>
 
 <textarea
 name="Message"
-rows="7"
-placeholder="Tell us your preferred therapist, treatment preferences or any special requests..."></textarea>
+rows="8"
+placeholder="Please let us know if you have any special requests, preferred therapist or anything else we should know."></textarea>
 
 </div>
 
 <button
 type="submit"
-class="primary-btn">
+class="primary-btn booking-btn">
 
 Reserve Appointment
 
@@ -344,23 +330,47 @@ Reserve Appointment
 
 </div>
 
-<!-- CONTACT INFO -->
+</div>
 
-<div class="contact-side">
+</section>
 
-<div class="info-card">
+<!-- =========================
+CONTACT INFORMATION
+========================= -->
 
-<div class="info-icon">
+<section class="contact-details">
 
-📍
+<div class="container">
+
+<div class="section-heading">
+
+<p class="section-subtitle">
+
+GET IN TOUCH
+
+</p>
+
+<h2>
+
+We're Here To Help
+
+</h2>
+
+<p>
+
+Have questions before your visit? Our team is always happy to assist you.
+
+</p>
 
 </div>
 
-<h3>
+<div class="contact-cards">
 
-Visit Our Spa
+<div class="contact-box">
 
-</h3>
+<div class="contact-icon">📍</div>
+
+<h3>Location</h3>
 
 <p>
 
@@ -372,19 +382,11 @@ Dubai, UAE
 
 </div>
 
-<div class="info-card">
+<div class="contact-box">
 
-<div class="info-icon">
+<div class="contact-icon">📞</div>
 
-📞
-
-</div>
-
-<h3>
-
-Call Us
-
-</h3>
+<h3>Phone</h3>
 
 <p>
 
@@ -394,19 +396,11 @@ Call Us
 
 </div>
 
-<div class="info-card">
+<div class="contact-box">
 
-<div class="info-icon">
+<div class="contact-icon">✉️</div>
 
-✉️
-
-</div>
-
-<h3>
-
-Email Us
-
-</h3>
+<h3>Email</h3>
 
 <p>
 
@@ -416,25 +410,17 @@ info@dubaimarinaspa.com
 
 </div>
 
-<div class="info-card">
+<div class="contact-box">
 
-<div class="info-icon">
+<div class="contact-icon">🕙</div>
 
-🕙
-
-</div>
-
-<h3>
-
-Opening Hours
-
-</h3>
+<h3>Opening Hours</h3>
 
 <p>
 
 Daily<br>
 
-10:00 AM – 3:00 AM
+10:00 AM – 11:00 PM
 
 </p>
 
@@ -445,120 +431,43 @@ Daily<br>
 </div>
 
 </section>
-  <!-- =========================
-LOCATION & WHY CHOOSE US
+<!-- =========================
+LOCATION
 ========================= -->
 
-<section class="experience">
+<section class="location-section">
 
-<div class="container experience-grid">
+<div class="container">
 
-<div class="experience-image">
-
-<iframe
-src="https://www.google.com/maps?q=Dubai+Marina,+Dubai,+United+Arab+Emirates&output=embed"
-width="100%"
-height="500"
-style="border:0;border-radius:25px;"
-loading="lazy"
-allowfullscreen>
-</iframe>
-
-</div>
-
-<div class="experience-content">
+<div class="section-heading">
 
 <p class="section-subtitle">
 
-OUR LOCATION
+VISIT OUR SPA
 
 </p>
 
 <h2>
 
-Luxury Wellness In The Heart Of Dubai Marina
+Conveniently Located In Dubai Marina
 
 </h2>
 
 <p>
 
-Conveniently located in one of Dubai's most prestigious neighbourhoods, Dubai Marina Spa offers a peaceful escape from the city's fast pace while remaining easy to reach.
-
-</p>
-
-<p>
-
-Whether you're visiting after work, enjoying a holiday or looking for a regular wellness routine, our elegant spa provides a calm environment where every guest receives personalised care.
-
-</p>
-
-<div class="experience-features">
-
-<div class="experience-box">
-
-<h3>
-
-Luxury Private Rooms
-
-</h3>
-
-<p>
-
-Elegant treatment suites designed for privacy, comfort and complete relaxation.
+Escape the city's pace and discover a peaceful luxury spa experience in one of Dubai's most prestigious neighbourhoods.
 
 </p>
 
 </div>
 
-<div class="experience-box">
+<div class="map-card">
 
-<h3>
-
-Premium Products
-
-</h3>
-
-<p>
-
-Only carefully selected massage oils and luxury skincare products are used during every treatment.
-
-</p>
-
-</div>
-
-<div class="experience-box">
-
-<h3>
-
-Professional Therapists
-
-</h3>
-
-<p>
-
-Experienced massage professionals delivering personalised treatments for every guest.
-
-</p>
-
-</div>
-
-<div class="experience-box">
-
-<h3>
-
-Daily Availability
-
-</h3>
-
-<p>
-
-Open every day with flexible appointment times for individuals and couples.
-
-</p>
-
-</div>
-
-</div>
+<iframe
+src="https://www.google.com/maps?q=Dubai+Marina,+Dubai,+United+Arab+Emirates&output=embed"
+loading="lazy"
+allowfullscreen>
+</iframe>
 
 </div>
 
@@ -567,7 +476,7 @@ Open every day with flexible appointment times for individuals and couples.
 </section>
 
 <!-- =========================
-WHY BOOK WITH US
+WHY CHOOSE US
 ========================= -->
 
 <section class="why-us">
@@ -578,19 +487,19 @@ WHY BOOK WITH US
 
 <p class="section-subtitle">
 
-WHY CHOOSE DUBAI MARINA SPA
+WHY CHOOSE US
 
 </p>
 
 <h2>
 
-Experience True Luxury & Relaxation
+Luxury Wellness With Exceptional Care
 
 </h2>
 
 <p>
 
-Every detail has been thoughtfully designed to provide a memorable spa experience that combines professional treatments with elegant surroundings.
+Every visit combines professional massage techniques, premium products and elegant surroundings to create an unforgettable spa experience.
 
 </p>
 
@@ -608,13 +517,13 @@ Every detail has been thoughtfully designed to provide a memorable spa experienc
 
 <h3>
 
-Expert Therapists
+Experienced Therapists
 
 </h3>
 
 <p>
 
-Experienced professionals delivering personalised massage treatments with exceptional care.
+Professionally trained therapists providing personalised treatments for complete relaxation.
 
 </p>
 
@@ -630,13 +539,13 @@ Experienced professionals delivering personalised massage treatments with except
 
 <h3>
 
-Premium Oils
+Premium Natural Oils
 
 </h3>
 
 <p>
 
-Natural massage oils and luxury skincare products chosen for every treatment.
+Only carefully selected massage oils and luxury skincare products are used throughout every treatment.
 
 </p>
 
@@ -658,7 +567,7 @@ Elegant Spa Environment
 
 <p>
 
-Beautiful interiors, calming music and luxurious private treatment rooms.
+Beautiful interiors, calming aromas and private treatment rooms designed for total comfort.
 
 </p>
 
@@ -668,19 +577,19 @@ Beautiful interiors, calming music and luxurious private treatment rooms.
 
 <div class="why-icon">
 
-⭐
+📅
 
 </div>
 
 <h3>
 
-Trusted By Thousands
+Easy Booking
 
 </h3>
 
 <p>
 
-Guests continue to return because of our relaxing atmosphere and outstanding service.
+Book online in minutes and our team will confirm your appointment as quickly as possible.
 
 </p>
 
@@ -693,7 +602,7 @@ Guests continue to return because of our relaxing atmosphere and outstanding ser
 </section>
 
 <!-- =========================
-CTA
+LUXURY CTA
 ========================= -->
 
 <section class="cta-banner">
@@ -702,13 +611,13 @@ CTA
 
 <h2>
 
-Your Luxury Spa Experience Starts Here
+Your Journey To Relaxation Starts Here
 
 </h2>
 
 <p>
 
-Reserve your appointment today and discover why guests choose Dubai Marina Spa for premium wellness and relaxation.
+Reserve your appointment today and enjoy premium wellness treatments delivered by experienced professionals in an elegant spa environment.
 
 </p>
 
@@ -722,7 +631,7 @@ Book Appointment
 
 <a href="services.html" class="secondary-btn">
 
-View Services
+Explore Services
 
 </a>
 
@@ -731,7 +640,7 @@ View Services
 </div>
 
 </section>
-  <!-- =========================
+<!-- =========================
 FAQ
 ========================= -->
 
@@ -773,7 +682,7 @@ Do I need an appointment?
 
 <p>
 
-Appointments are recommended to guarantee your preferred time and therapist, although walk-ins are welcome when availability allows.
+Appointments are recommended to ensure your preferred therapist and time are available. Walk-ins are welcome when availability permits.
 
 </p>
 
@@ -783,13 +692,13 @@ Appointments are recommended to guarantee your preferred time and therapist, alt
 
 <h3>
 
-Which massage should I choose?
+How long are massage sessions?
 
 </h3>
 
 <p>
 
-If you're unsure, our experienced therapists will recommend the treatment that best suits your needs.
+Most treatments are available in 60, 90 and 120-minute sessions depending on your preference.
 
 </p>
 
@@ -799,13 +708,13 @@ If you're unsure, our experienced therapists will recommend the treatment that b
 
 <h3>
 
-How long are treatments?
+Do you offer private treatment rooms?
 
 </h3>
 
 <p>
 
-Most massage sessions are available in 60, 90 and 120-minute options.
+Yes. Every guest enjoys a beautifully designed private treatment room for complete comfort and privacy.
 
 </p>
 
@@ -815,13 +724,13 @@ Most massage sessions are available in 60, 90 and 120-minute options.
 
 <h3>
 
-Do you use premium oils?
+What payment methods do you accept?
 
 </h3>
 
 <p>
 
-Yes. Every treatment includes carefully selected massage oils and luxury skincare products.
+We accept cash and most major credit and debit cards.
 
 </p>
 
@@ -831,13 +740,13 @@ Yes. Every treatment includes carefully selected massage oils and luxury skincar
 
 <h3>
 
-Do you have private treatment rooms?
+Can I book for couples?
 
 </h3>
 
 <p>
 
-Yes. Every guest enjoys a beautifully designed private massage suite for complete comfort and privacy.
+Yes. Couples massage appointments are available with advance booking.
 
 </p>
 
@@ -853,7 +762,7 @@ What are your opening hours?
 
 <p>
 
-We are open every day from 10:00 AM until 11:00 PM.
+We are open daily from 10:00 AM until 11:00 PM.
 
 </p>
 
@@ -883,7 +792,7 @@ Dubai Marina Spa
 
 <p>
 
-Luxury massage, wellness treatments and premium relaxation experiences in Dubai Marina.
+Luxury massage, premium wellness treatments and complete relaxation in the heart of Dubai Marina.
 
 </p>
 
@@ -917,7 +826,7 @@ Quick Links
 
 <h3>
 
-Treatments
+Popular Treatments
 
 </h3>
 
@@ -927,7 +836,7 @@ Treatments
 
 <li>Deep Tissue Massage</li>
 
-<li>Aromatherapy Massage</li>
+<li>Aromatherapy</li>
 
 <li>Moroccan Bath</li>
 
@@ -968,7 +877,7 @@ Monday – Sunday
 </footer>
 
 <!-- =========================
-LOCAL BUSINESS SCHEMA
+SCHEMA
 ========================= -->
 
 <script type="application/ld+json">
