@@ -33,21 +33,94 @@
   "name": "Dubai Marina Spa",
   "description": "Spa discovery and referral service matching guests with vetted spas and massage centres in Dubai Marina.",
   "url": "https://www.dubaimarinaspa.com/",
+  "image": "https://images.unsplash.com/photo-1650044252595-cacd425982ff?w=1200&q=80&auto=format&fit=crop",
   "email": "leads@dubaimarinaspa.com",
   "telephone": "+971-5X-XXX-XXXX",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Marina Walk",
     "addressLocality": "Dubai Marina",
     "addressRegion": "Dubai",
     "addressCountry": "AE"
   },
-  "areaServed": "Dubai Marina, Dubai, UAE",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 25.0805,
+    "longitude": 55.1403
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Dubai Marina, JBR, JLT, Bluewaters, Dubai, UAE"
+  },
   "priceRange": "Free service",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.8",
     "reviewCount": "64"
   }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this an actual spa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — we're an independent matching service. We connect you with vetted, independently-run spas in Dubai Marina; treatments happen at their premises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it cost anything to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nothing. You only pay the spa's normal treatment price when you visit — our matching service is free for guests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast will I hear back?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most guests hear from a matched spa within 15 minutes during the day. Late-night requests are confirmed the next morning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I request a specific spa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — mention it in the message field and we'll try to match you there if they're part of our network and available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the spas licensed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every spa in our network is checked for a valid trade licence and hygiene standards before we add them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I'm not happy with the match?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Message us and we'll match you with a different spa — no charge, no questions asked."
+      }
+    }
+  ]
 }
 </script>
 
