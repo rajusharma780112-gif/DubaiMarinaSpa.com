@@ -170,7 +170,7 @@ section{ padding:104px 0; }
 .treatments .sec-head p{ color:rgba(246,241,231,0.7); }
 .treatment-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
 .treatment-card{
-  background:var(--emerald-2); border-radius:18px; overflow:hidden;
+  display:block; background:var(--emerald-2); border-radius:18px; overflow:hidden;
   border:1px solid var(--line-on-dark);
   transition:transform .3s ease, box-shadow .3s ease;
 }
