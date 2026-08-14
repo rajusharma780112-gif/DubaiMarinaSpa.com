@@ -1,8 +1,8 @@
 :root{
   --sand:#F5EDE4;
   --sand-2:#EBDFD0;
-  --wine:#B85670;
-  --wine-2:#9C4258;
+  --wine:#8C3D3F;
+  --wine-2:#6B2C2E;
   --gold:#B8935A;
   --gold-soft:#D1B587;
   --ink:#2A1518;
@@ -111,7 +111,7 @@ h1 em, h2 em{ font-style:italic; font-weight:500; color:var(--gold); }
 .btn-primary:hover{ transform:translateY(-2px); background:var(--gold-soft); box-shadow:0 14px 30px rgba(184,147,90,0.35); }
 .btn-ghost{ border-color:rgba(245,237,228,0.4); color:var(--white); }
 .btn-ghost:hover{ border-color:var(--gold); color:var(--gold-soft); }
-.btn-whatsapp{ background:#25D366; color:#4A1B26; margin-top:8px; box-shadow:0 10px 24px rgba(37,211,102,0.25); }
+.btn-whatsapp{ background:#25D366; color:#6B2C2E; margin-top:8px; box-shadow:0 10px 24px rgba(37,211,102,0.25); }
 .btn-whatsapp:hover{ transform:translateY(-2px); background:#2fe077; box-shadow:0 14px 30px rgba(37,211,102,0.35); }
 
 /* ===== HERO ===== */
@@ -120,7 +120,7 @@ h1 em, h2 em{ font-style:italic; font-weight:500; color:var(--gold); }
 .hero-media img{ width:100%; height:100%; object-fit:cover; object-position:center; opacity:0.75; }
 .hero-media::after{
   content:""; position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(74,27,38,0.15) 0%, rgba(74,27,38,0.55) 55%, rgba(74,27,38,0.92) 88%, var(--wine) 100%);
+  background:linear-gradient(180deg, rgba(107,44,46,0.15) 0%, rgba(107,44,46,0.55) 55%, rgba(107,44,46,0.92) 88%, var(--wine) 100%);
 }
 .hero-inner{ position:relative; z-index:2; max-width:720px; padding-bottom:96px; }
 .hero h1{ font-size:clamp(40px, 6vw, 68px); color:var(--white); margin:16px 0 22px; text-shadow:0 4px 24px rgba(0,0,0,0.35); }
@@ -256,7 +256,7 @@ section{ padding:104px 0; }
 /* ===== WHATSAPP FLOAT ===== */
 .whatsapp-float{
   position:fixed; right:28px; bottom:28px; z-index:200; width:68px; height:68px;
-  border-radius:50%; background:#25D366; color:#4A1B26;
+  border-radius:50%; background:#25D366; color:#6B2C2E;
   display:flex; align-items:center; justify-content:center;
   box-shadow:0 10px 28px rgba(0,0,0,0.35); transition:transform .2s ease, box-shadow .2s ease;
 }
