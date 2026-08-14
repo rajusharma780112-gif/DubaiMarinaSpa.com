@@ -1,8 +1,8 @@
 :root{
   --sand:#F5EDE4;
   --sand-2:#EBDFD0;
-  --wine:#6B2737;
-  --wine-2:#4A1B26;
+  --wine:#B85670;
+  --wine-2:#9C4258;
   --gold:#B8935A;
   --gold-soft:#D1B587;
   --ink:#2A1518;
@@ -55,10 +55,10 @@ h1 em, h2 em{ font-style:italic; font-weight:500; color:var(--gold); }
 /* ===== NAV ===== */
 .nav{
   position:fixed; top:0; left:0; right:0; z-index:100;
-  background:rgba(74,27,38,0.88);
+  background:rgba(255,255,255,0.85);
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line-on-dark);
+  border-bottom:1px solid var(--line);
 }
 .nav-inner{
   max-width:1200px; margin:0 auto; padding:0 32px;
@@ -69,34 +69,35 @@ h1 em, h2 em{ font-style:italic; font-weight:500; color:var(--gold); }
 .brand-mark{ width:34px; height:34px; }
 .brand-word{
   font-family:var(--display); font-weight:600; font-size:19px;
-  color:var(--white); letter-spacing:-0.01em; white-space:nowrap;
+  color:var(--ink); letter-spacing:-0.01em; white-space:nowrap;
 }
 .brand-word em{ font-style:italic; font-weight:500; color:var(--gold); }
+.footer-brand .brand-word{ color:var(--white); }
 
 .nav-links{ display:flex; gap:30px; }
 .nav-links a{
-  font-size:13.5px; font-weight:600; color:rgba(245,237,228,0.78);
+  font-size:13.5px; font-weight:600; color:var(--stone);
   transition:color .2s ease;
 }
-.nav-links a:hover{ color:var(--white); }
+.nav-links a:hover{ color:var(--wine); }
 
 .nav-cta{ display:flex; align-items:center; gap:14px; margin-left:auto; }
 .nav-burger{
   display:none; width:38px; height:38px; background:transparent;
-  border:1px solid var(--line-on-dark); color:var(--white);
+  border:1px solid var(--line); color:var(--ink);
   align-items:center; justify-content:center; cursor:pointer; flex-shrink:0;
 }
 .nav-burger svg{ width:18px; height:18px; }
 
 .mobile-links{
   display:none; position:absolute; top:84px; left:0; right:0;
-  background:var(--wine); border-bottom:1px solid var(--line-on-dark);
+  background:var(--sand); border-bottom:1px solid var(--line);
   flex-direction:column; padding:8px 32px 20px;
 }
 .mobile-links.is-open{ display:flex; }
 .mobile-links a{
-  font-size:13.5px; font-weight:600; color:rgba(245,237,228,0.85);
-  padding:14px 0; border-bottom:1px solid var(--line-on-dark);
+  font-size:13.5px; font-weight:600; color:var(--stone);
+  padding:14px 0; border-bottom:1px solid var(--line);
 }
 .mobile-links a:last-child{ border-bottom:none; }
 
